@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="520.0" prefWidth="846.0" style="-fx-background-color: black;" stylesheets="@../CSS/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ThongTinController">
+   <children>
+      <Label layoutX="49.0" layoutY="382.0" prefHeight="29.0" prefWidth="310.0" text="Họ và Tên : Nguyễn Bảo Tam" textFill="#b2b265">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="205.0" layoutY="30.0" prefHeight="37.0" prefWidth="436.0" text="THÔNG TIN PHẦN MỀM" textFill="#da392d">
+         <font>
+            <Font name="Times New Roman" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="49.0" layoutY="330.0" prefHeight="37.0" prefWidth="253.0" text="Thông tin thành viên :" textFill="#c476f5" underline="true">
+         <font>
+            <Font name="Times New Roman" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="49.0" layoutY="418.0" prefHeight="29.0" prefWidth="310.0" text="MSSV : 1824801030198" textFill="#b2b265">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="49.0" layoutY="457.0" prefHeight="29.0" prefWidth="310.0" text="Lớp : D18PM03" textFill="#b2b265">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="466.0" layoutY="381.0" prefHeight="29.0" prefWidth="310.0" text="Họ và Tên : Trương Vũ Linh" textFill="#b2b265">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="466.0" layoutY="417.0" prefHeight="29.0" prefWidth="310.0" text="MSSV : 1824801030194" textFill="#b2b265">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="466.0" layoutY="456.0" prefHeight="29.0" prefWidth="310.0" text="Lớp : D18PM03" textFill="#b2b265">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="image" fitHeight="228.0" fitWidth="317.0" layoutX="271.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/Team.jpg" />
+         </image></ImageView>
+      <JFXButton fx:id="Home" layoutX="666.0" layoutY="470.0" onAction="#Back_Home" prefHeight="33.0" prefWidth="159.0" styleClass="button-Home" text="Quay về trang chủ">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

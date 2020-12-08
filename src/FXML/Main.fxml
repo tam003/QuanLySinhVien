@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderpane" prefHeight="520.0" prefWidth="1080.0" stylesheets="@../CSS/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+   <center>
+      <Pane prefHeight="600.0" prefWidth="1080.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="panePage" prefHeight="520.0" prefWidth="850.0" styleClass="BackgroundHome" stylesheets="@../CSS/application.css">
+               <children>
+                  <Pane fx:id="paneStudent" layoutX="47.0" layoutY="14.0" onMouseClicked="#Student_Click" prefHeight="231.0" prefWidth="230.0" styleClass="panelcoverover">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USERS" layoutX="65.0" layoutY="150.0" size="100" />
+                        <Label alignment="CENTER" layoutX="55.0" layoutY="189.0" prefHeight="28.0" prefWidth="127.0" text="SINH VIÊN" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" color="#0067ff" height="12.5" radius="8.875" width="25.0" />
+                           </effect>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneClass" layoutX="308.0" layoutY="14.0" onMouseClicked="#Class_Click" prefHeight="231.0" prefWidth="230.0" styleClass="panelcoverover">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="INDENT" layoutX="65.0" layoutY="150.0" size="100" />
+                        <Label alignment="CENTER" layoutX="76.0" layoutY="190.0" prefHeight="28.0" prefWidth="79.0" text="LỚP" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" color="#ff00f3" height="18.75" radius="10.4375" width="25.0" />
+                           </effect>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneMajors" layoutX="570.0" layoutY="14.0" onMouseClicked="#Majors_Click" prefHeight="231.0" prefWidth="230.0" styleClass="panelcoverover">
+                     <children>
+                        <Label alignment="CENTER" layoutX="76.0" layoutY="189.0" prefHeight="28.0" prefWidth="79.0" text="KHOA" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" color="#ff00f3" height="18.75" radius="10.4375" width="25.0" />
+                           </effect>
+                        </Label>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SERVER" layoutX="65.0" layoutY="150.0" size="100" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneSetting" layoutX="47.0" layoutY="278.0" onMouseClicked="#Setting_Click" prefHeight="231.0" prefWidth="230.0" styleClass="panelcoverover">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SLIDERS" layoutX="72.0" layoutY="150.0" size="100" />
+                        <Label alignment="CENTER" layoutX="51.0" layoutY="178.0" prefHeight="28.0" prefWidth="127.0" text="CÀI ĐẶT" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" color="#0067ff" height="12.5" radius="8.875" width="25.0" />
+                           </effect>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneReport" layoutX="308.0" layoutY="278.0" onMouseClicked="#Report_Click" prefHeight="231.0" prefWidth="230.0" styleClass="panelcoverover">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BAR_CHART" layoutX="58.0" layoutY="150.0" size="100" />
+                        <Label alignment="CENTER" layoutX="52.0" layoutY="180.0" prefHeight="28.0" prefWidth="127.0" text="THỐNG KÊ" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" color="#0067ff" height="12.5" radius="8.875" width="25.0" />
+                           </effect>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneInfomation" layoutX="570.0" layoutY="278.0" onMouseClicked="#Infomation_Click" prefHeight="231.0" prefWidth="230.0" styleClass="panelcoverover">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="INFO_CIRCLE" layoutX="72.0" layoutY="150.0" size="100" />
+                        <Label alignment="CENTER" layoutX="46.0" layoutY="178.0" prefHeight="28.0" prefWidth="138.0" text="THÔNG TIN" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font>
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" color="#ff00f3" height="18.75" radius="10.4375" width="25.0" />
+                           </effect>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </center>
+   <left>
+      <Pane prefWidth="230.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+         <children>
+            <Line endX="47.0" layoutX="143.0" layoutY="148.0" startX="-100.0" stroke="WHITE" />
+            <Label layoutX="23.0" layoutY="177.0" text="Giới thiệu :" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="480.0" text="Verson :" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="117.0" layoutY="480.0" prefHeight="28.0" prefWidth="51.0" style="-fx-background-color: white;" text="1.1" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="23.0" layoutY="205.0" prefHeight="174.0" prefWidth="189.0" text="Đồ án môn Thực tập doanh nghiệp" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="#eb0a0a" glyphName="GE" layoutX="67.0" layoutY="121.0" size="100" />
+         </children>
+      </Pane>
+   </left>
+</BorderPane>

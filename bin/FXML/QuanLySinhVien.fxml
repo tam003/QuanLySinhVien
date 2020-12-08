@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="520.0" prefWidth="846.0" styleClass="Color" stylesheets="@../CSS/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.QuanLySinhVienController">
+   <children>
+      <Pane prefHeight="43.0" prefWidth="488.0">
+         <children>
+            <Label layoutX="89.0" layoutY="8.0" text="KHOA" textFill="RED">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cbKhoa" layoutX="169.0" onAction="#KhoaChange" prefHeight="44.0" prefWidth="319.0" styleClass="fontLarge" unFocusColor="WHITE" />
+         </children>
+      </Pane>
+      <TableView fx:id="tableSV" layoutX="8.0" layoutY="43.0" onMouseClicked="#TableRowEnter" prefHeight="470.0" prefWidth="480.0" style="-fx-background-color: #B2B2B2;">
+        <columns>
+          <TableColumn fx:id="col_MSSV" prefWidth="76.0" text="MSSV" />
+          <TableColumn fx:id="col_Lop" prefWidth="70.0" text="Lớp" />
+            <TableColumn fx:id="col_HoTen" prefWidth="100.0" text="Họ Tên" />
+            <TableColumn fx:id="col_GT" prefWidth="34.0" text="GT" />
+            <TableColumn fx:id="col_NgaySinh" prefWidth="75.0" text="Ngày sinh" />
+            <TableColumn fx:id="col_DiaChi" prefWidth="85.0" text="Địa chỉ" />
+            <TableColumn fx:id="col_Diem" prefWidth="39.0" text="Điểm" />
+        </columns>
+      </TableView>
+      <Pane layoutX="488.0" prefHeight="520.0" prefWidth="358.0">
+         <children>
+            <Label layoutX="66.0" layoutY="14.0" text="HỒ SƠ TÂN SINH VIÊN" textFill="#e3f026">
+               <font>
+                  <Font name="Times New Roman" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="70.0" text="MSSV :" textFill="#ffff8d">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtMSSV" layoutX="104.0" layoutY="70.0" onAction="#SetButton" onKeyReleased="#SetButton" prefHeight="26.0" prefWidth="136.0" style="-fx-text-fill: white;">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="20.0" layoutY="120.0" text="Họ và Tên :" textFill="#ffff8d">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtHoTen" layoutX="105.0" layoutY="120.0" prefHeight="26.0" prefWidth="136.0" style="-fx-text-fill: white;">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="20.0" layoutY="170.0" text="Giới tính :" textFill="#ffff8d">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cbGT" layoutX="105.0" layoutY="166.0" prefHeight="25.0" prefWidth="136.0" />
+            <Label layoutX="20.0" layoutY="220.0" text="Lớp  :" textFill="#ffff8d">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cbLop" layoutX="105.0" layoutY="220.0" onAction="#Lop_Change" prefHeight="25.0" prefWidth="136.0" />
+            <Label layoutX="20.0" layoutY="270.0" text="Ngày sinh :" textFill="#ffff8d">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dpkNgaySinh" layoutX="105.0" layoutY="270.0" prefHeight="25.0" prefWidth="136.0" promptText="YYYY/MM/dd" />
+            <Label layoutX="20.0" layoutY="320.0" text="Điểm đầu vào :" textFill="#ffff8d">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtDiem" layoutX="114.0" layoutY="316.0" prefHeight="25.0" prefWidth="34.0" style="-fx-text-fill: white;">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="20.0" layoutY="370.0" text="Địa chỉ :" textFill="#ffff8d">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextArea fx:id="txtDiaChi" layoutX="20.0" layoutY="386.0" prefHeight="53.0" prefWidth="222.0" style="-fx-text-fill: white;" />
+            <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="270.0" layoutY="110.0" onAction="#Add" prefHeight="31.0" prefWidth="69.0" styleClass="buttonBlue" text="Thêm" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#f3ff4c" />
+                        <Stop color="#ee4f4f" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="btnEdit" buttonType="RAISED" disable="true" layoutX="270.0" layoutY="260.0" onAction="#Edit" prefHeight="31.0" prefWidth="69.0" styleClass="buttonBlue" text="Sửa" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#f3ff4c" />
+                        <Stop color="#e15353" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="btnDelete" buttonType="RAISED" disable="true" layoutX="270.0" layoutY="210.0" onAction="#Delete" prefHeight="31.0" prefWidth="69.0" styleClass="buttonBlue" text="Xóa" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#f3ff4c" />
+                        <Stop color="#e13e3e" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="btnClear" buttonType="RAISED" layoutX="270.0" layoutY="160.0" onAction="#Clear" prefHeight="31.0" prefWidth="69.0" styleClass="buttonBlue" text="Clear" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#f3ff4c" />
+                        <Stop color="#f25757" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <Line endX="237.5" layoutX="104.0" layoutY="456.0" startX="-88.5" stroke="WHITE" />
+            <JFXButton layoutX="85.0" layoutY="473.0" onAction="#Back_Home" prefHeight="39.0" prefWidth="208.0" styleClass="button-Home" text="Trang chủ">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

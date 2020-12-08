@@ -1,0 +1,107 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+*{
+    -fx-primary : #2A2E37;
+    -fx-secondary : #FFFF8D;
+    -fx-primarytext : #B2B2B2;
+    -fx-blue: #1976D2;
+    -fx-red: #FF0000;
+    -fx-color-1:#1976D2;
+}
+
+.Color{
+    -fx-background-color: -fx-primary;
+}
+
+
+.BackgroundHome{
+	-fx-background-image:url('../Image/Background.jpg'); 
+	-fx-background-size: 100%;
+}
+
+.paneheader {
+	-fx-border-style: solid ;
+	-fx-border-width: 1px 1px;
+	-fx-background-color: linear-gradient(#a5b4c4, #206AB5, red);
+}
+
+.panelcover {
+	-fx-border-style: solid ;
+	-fx-border-color: rgb(255,0,255) rgb(255,0,0) rgb(255,0,0)  rgb(255,0,255);
+}
+
+.panelcoverover:hover {
+	-fx-border-style: solid;
+	-fx-border-width: 2px;
+	-fx-border-color: aquamarine rgb(255,0,0)  rgb(255,0,255) rgb(255,0,0);
+}
+.fontLarge {
+	-fx-font-size: 24px;
+}
+
+.jfx-combo-box {
+	-fx-background-color: -fx-primary;
+	-fx-font-family: "Times New Roman";
+}
+
+.jfx-combo-box .list-view .list-cell:filled{
+	-fx-background-color: white;
+	-fx-text-fill: black;
+}
+
+.jfx-combo-box .list-view .list-cell:filled:selected {
+	-fx-background-color: -fx-primary;
+	-fx-text-fill: -fx-primarytext;
+}
+
+.jfx-combo-box .list-view .list-cell:filled:hover{
+	-fx-background-color: -fx-primarytext;
+	-fx-text-fill: -fx-secondary;
+}
+.jfx-combo-box .list-cell {
+    -fx-text-fill: -fx-primarytext;
+    -fx-background-color: -fx-primary;
+}
+
+
+.buttonRed{
+	-fx-text-fill: white ;
+	-fx-background-color: rgb(255,102,102);
+}
+
+.buttonBlue{
+	-fx-text-fill: white ;
+	-fx-background-color: rgb(0,128,255);
+	-fx-background-radius : 6px;
+}
+.fontHeader{
+	-fx-text-fill: rgb(77,102,204);
+}
+
+.borderCBox{
+	-fx-border-width: 0px;
+}
+
+.button-Home{
+    -fx-text-fill: -fx-primarytext;
+    -fx-background-color: -fx-primary;
+    -fx-border-color: -fx-secondary;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-font-size: 12pt;
+    -fx-font-family: "Times New Roman";
+}
+
+.button:hover, .button:focused {
+    -fx-border-color: -fx-secondary;
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-primary;
+}
+
+.text-field-Khoa
+{
+    -fx-text-fill: -fx-secondary;
+    -jfx-focus-color: -fx-secondary;
+    -fx-prompt-text-fill:derive(-fx-secondary, 20%);
+}
+
