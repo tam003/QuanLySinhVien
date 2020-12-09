@@ -322,7 +322,7 @@ public class QuanLySinhVienController implements Initializable{
     }
     
     public void Lop_Change(ActionEvent event){
-    	if (listLop != null)
+    	if (!listLop.isEmpty())
     	{
     		MaLop = cbLop.getValue().getMaLop();
 	    	query = "Select MSSV, TenLop, Hoten, GioiTinh, DiaChi, NgaySinh, Diem From SinhVien, Lop Where Lop.MaLop =" + MaLop + " and SinhVien.MaLop = Lop.MaLop";
